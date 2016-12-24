@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MX Player for Fire HD 8.9</title>
+    <style>
+        a {font-size: 130%; font-family: Georgia,Helvetica,sans-serif; color: #666666;}
+        body{ background-color: #EEEEEE;}
+    </style>
+</head>
+<body>
+  <ol type="1">
+      <!-- [(filename, url), (filename, nginx_url, django_url), ...] -->
+      {% for filename, nginx_url, django_url in files %}
+      <li><p><a href="{{ nginx_url }}">{{ filename }}</a>&nbsp;&nbsp;&nbsp;<a href="{{ django_url }}">django url</a></p></li>
+      {% endfor %}
+  </ol>
+</body>
+</html>

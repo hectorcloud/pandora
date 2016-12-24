@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Pandora Jewelry</title>
+   </head>
+   <a href="./kk.txt">good.docx</a>
+   <body style="background-color:#E0FFB8">
+     <p>How are you, Denmark?</p>
+    <form action="/your-name/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Submit" />
+    </form>
+   I <strong>really</strong> mean that.
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+   </body>
+</html>
